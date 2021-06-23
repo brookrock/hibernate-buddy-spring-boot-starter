@@ -1,0 +1,46 @@
+= Hibernate Buddy
+
+Hibernate Buddy brings some handy features for Hiberate/JPA to your Spring Boot applications.
+
+== Features
+
+* Provide Snowflake ID generator which is better than identity or UUID generator and database-agnostic.
+* Provide a bunch of `AttributeConverter` to store Set/List/Map as String.
+* Provide `JsonType` to allow complex fields store as json.
+
+== Getting Started
+
+Here is a example entity:
+
+[source,java,indent=0,subs="verbatim"]
+----
+include::src/test/java/io/brookrock/hibernate/integrated/IntegratedEntity.java[]
+----
+You can omit `@TypeDefs` and remove `id` field if your entity extends `AbstractEntity`.
+
+=== Maven configuration
+
+Add the Maven dependency:
+
+[source,xml]
+----
+<dependency>
+  <groupId>io.brookrock</groupId>
+  <artifactId>hibernate-buddy-spring-boot-starter</artifactId>
+  <version>${version}</version>
+</dependency>
+----
+
+=== Gradle configuration
+
+Add the Maven dependency:
+
+[source,groovy]
+----
+imlementation "io.brookrock:hibernate-buddy-spring-boot-starter:${version}"
+----
+
+
+== License
+
+https://www.apache.org/licenses/LICENSE-2.0.html[Apache 2.0 license].
